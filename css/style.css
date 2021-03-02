@@ -15,6 +15,7 @@
   --social-footer: rgba(255, 255, 255, 0.1);
   --background-work: rgba(47, 48, 58, 0.8);
   --background-card-aside: rgba(33, 150, 243, 0.9);
+  --background-backdrop: rgba(0, 0, 0, 0.2);
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -218,18 +219,22 @@ p {
   display: inline-block;
   min-width: 200px;
   padding: 10px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
   border-radius: 4px;
   color: var(--text-hero-white);
   background-color: var(--text-blue);
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  
 }
 
 .hero-container {
   max-width: 696px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -680,7 +685,12 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(247, 90, 63, 0.2);
+  background-color: var(--background-backdrop);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -689,8 +699,20 @@ img {
   top: 50%;
   transform: translate(-50%, -50%);
 
+  display: flex;
+  justify-content: flex-end;
+
   min-width: 528px;
   min-height: 581px;
   background-color:  var(--text-hero-white);
 
+}
+
+.modal-btn {
+  
+  width: 30px;
+  height: 30px;
+  text-align: right;
+
+  cursor: pointer;
 }
