@@ -377,7 +377,7 @@
             <div class="footer-subscribe">
                 <p class="footer-subscribe-paragraph">Subscribe</p>
                 <form class="footer-form">
-                    <label class="footer-form-label">
+                    <label class="footer-form-label" for="email_user">
                         <input  class="footer-form-input" type="email" name="email_user" placeholder="E-mail" />
                     </label>
                     <button class="footer-form-btn" type="submit">
@@ -402,7 +402,7 @@
                 <div class="form-field">
                     <label class="form-label" for="input-name">Name</label>
                     <div class="input-wrapper">
-                        <input class="form-input" name="input-name" id="input-name" type="text" required/>
+                        <input class="form-input" name="input-name" id="input-name" type="text" />
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
@@ -411,7 +411,7 @@
                 <div class="form-field">
                     <label class="form-label" for="input-tel">Phone</label>
                     <div class="input-wrapper">
-                        <input class="form-input" name="input-tel" id="input-tel" type="tel" required/>
+                        <input class="form-input" name="input-tel" id="input-tel" type="tel" />
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
@@ -420,7 +420,7 @@
                 <div class="form-field">
                     <label class="form-label" for="input-email">Email</label>
                     <div class="input-wrapper">
-                        <input class="form-input" name="input-email" id="input-email" type="email" required/>
+                        <input class="form-input" name="input-email" id="input-email" type="email" />
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
@@ -432,13 +432,26 @@
                         <textarea class="form-textarea" name="input-textarea" rows="" cols="" placeholder="Text input" id="input-textarea"></textarea>
                     </div>
                 </div>
-                <input type="checkbox" name="input-checkbox" value="" required />
-                    <svg class="form-icon" width="10" height="8">
-                        <use href="./images/icons.svg#icon-name"></use>
-                    </svg>
-                <label class="form-label" for="input-checkbox">I accept the terms and conditions of the <a class="form-checkbox-link" href="">Privacy Policy</a>
-                </label>
+                <div class="form-field">
+                    <input 
+                        class="input-check" 
+                        type="checkbox" 
+                        name="input-checkbox" 
+                        id="input-checkbox" 
+                        value="true" 
+                        required 
+                    />
+                    <label class="form-label-checked" for="input-checkbox">
+                    <span class="form-checked-icon">
+                        <svg class="form-icon-checkbox" width="10" height="8">
+                            <use href="./images/icons.svg#icon-vector"></use>
+                        </svg>
+                    </span>
+                    I accept the terms and conditions of the <a class="form-checkbox-link" href="">Privacy Policy</a>
+                    </label>
+                </div>
                 <button class="modal-form-btn" type="submit">Send</button>
+                
             </form>
         </div>
     </div>

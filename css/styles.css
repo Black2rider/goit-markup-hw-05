@@ -657,13 +657,12 @@ margin-bottom: 16px;
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   margin-bottom: 8px;
 }
 
 .form-label {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -694,7 +693,43 @@ margin-bottom: 16px;
 .form-textarea {
   width: 100%;
   height: 120px;
-  padding: 8px 16px;
+  padding: 8px ;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
+}
+
+.input-check {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-label-checked {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+
+.form-checked-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--navy-blue-modal);
+  margin-right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+}
+
+.input-check:checked + .form-label-checked .form-icon-checkbox {
+  border: none;
+  fill: var(--cloud);
+  background-color: var(--ocean);
 }
